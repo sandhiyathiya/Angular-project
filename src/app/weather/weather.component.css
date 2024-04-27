@@ -1,0 +1,24 @@
+.app{
+     background-color: purple; 
+     padding: 60px;
+     border-radius: 10px;
+     margin: 100px 200px;
+     text-align: center;
+     height: 500px;
+    }
+    #c{
+      padding: 15px;
+      border-radius: 10px;
+    }
+    
+    #a{
+        color: yellowgreen;
+    }
+    #d{
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .res{
+        color:beige;
+    }
+    

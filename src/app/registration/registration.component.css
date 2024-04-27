@@ -1,0 +1,10 @@
+.reg{
+    font-size: 30px;
+}
+
+.a,th,td{
+    border: 1px solid black;
+}
+.b{
+    color:red;
+}

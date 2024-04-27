@@ -1,0 +1,35 @@
+<p>crud works!</p>
+
+<form [formGroup]="myform" (ngSubmit)="onsubmit(myform)">
+    <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" formControlName="fname">
+    </div><br>
+
+    <div>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" formControlName="lname">
+    </div><br>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+    </div><br>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<table class="a">
+    <tr>
+        <th>FirstName</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let x of data">
+        <td>{{ x.fname }}</td>
+        <td>{{ x.lname }}</td>
+        <td>{{ x.email }}</td>
+    </tr> 
+</table>

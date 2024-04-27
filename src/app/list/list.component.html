@@ -1,0 +1,15 @@
+<p>list works!</p>
+<p>list works!</p>
+<ol>
+<li class="s">tamil</li>
+<li class="s">english</li>
+<li class="s">maths</li>
+<li class="s">science</li>
+<li class="s">social</li>
+</ol>
+
+<button (click)="senddata()"> Send </button> 
+<button (click)="getdata()">api</button>
+<ul *ngFor="let x of rescive">
+<li>{{x.id}}</li>
+</ul>

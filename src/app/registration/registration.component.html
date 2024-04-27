@@ -1,0 +1,105 @@
+<p>registration works!</p>
+
+<p class="reg">Registeration Form</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div>
+    <label >
+      FirstName:
+      <input class="c" formControlName="firstname" placeholder="Enter your fname">
+    </label>
+    <div class="b" *ngIf="myForm.get('firstname').invalid && (myForm.get('firstname').dirty || myForm.get('firstname').touched)">
+     * Please provide a name.
+    </div>
+  </div><br><br>
+    <div>
+        <label>
+          LastName:
+          <input formControlName="lastname" placeholder="Enter your lname">
+        </label>
+        <div class="b" *ngIf="myForm.get('lastname').invalid && (myForm.get('lastname').dirty || myForm.get('lastname').touched)">
+        *  Please provide a Lastname.
+        </div><br><br>
+  
+  </div><br><br>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+      <div class="b" *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+       * Email is required.</div>
+  </div><br><br>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" placeholder="Enter password">
+    <div class="b" *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)">
+   * Password is required.</div>
+  </div><br><br>
+  <div>
+    <label>
+      Address:
+      <input formControlName="address" placeholder="Enter Address">
+    </label>
+    <div class="b" *ngIf="myForm.get('address').invalid && (myForm.get('address').dirty || myForm.get('address').touched)">
+     * Messages must be at least 15 characters long.
+    </div></div><br><br>
+  <div>
+  <label for="city">City: </label>
+  <input id="city" type="text" formControlName="city" placeholder="city">
+  <div class="b" *ngIf="myForm.get('city').invalid && (myForm.get('city').dirty || myForm.get('city').touched)">
+    * Enter current city</div>
+  </div><br><br>
+  <div>
+  <label for="state">State: </label>
+  <input id="state" type="text" formControlName="state" placeholder="state">
+  <div class="b" *ngIf="myForm.get('state').invalid && (myForm.get('state').dirty || myForm.get('address').touched)">
+    * Enter current state</div>
+  </div><br><br>
+
+    <div>
+        <label>country:</label>
+        <select name="Country">
+          <option value="india">India</option>
+          <option value="uk">UK</option>
+          <option value="canada">Canada</option>
+           <option value="usa">USA</option>
+          <option value="russia">Russia</option>
+          <option value="india">pakistan</option>
+          <option value="india">srilanka</option>
+          <option value="india">australia</option>
+          <option value="india">newsland</option>
+          <option value="india">southafrica</option>
+        </select>
+    </div><br><br>
+    <div>
+      <label for="gender">Gender :</label>
+      <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    </div><br><br>
+  
+     <div>
+        <button type="submit">Submit</button>
+        </div><br><br>
+       </form>
+        <table class="a">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>gender</th>
+            </tr>
+            <tr *ngFor="let user of data">
+          <td>{{user.firstname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.city}}</td>
+          <td>{{user.state}}</td>
+          <td>{{user.country}}</td>
+          <td>{{user.gender}}</td>
+          </tr>
+          </table>

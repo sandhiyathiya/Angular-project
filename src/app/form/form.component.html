@@ -1,0 +1,61 @@
+<!-- <p>form works!</p><br><div> <form> 
+     <select>   
+         <option value="">select country</option>
+         <option *ngFor="let x of country" [value]="x.country">{{x.country}}</option>
+         </select></form></div><br><br> -->
+         <form [formGroup]="myform" (ngSubmit)="onsubmit(myform)">
+            <div><label for="fname">First name:</label>
+                 <input type="text" name="fname" formControlName="fname" > </div><br>
+    <div> <label for="lname">Last name:</label>
+        <input type="text"  name="lname" formControlName="lname"></div><br><div>
+             <label for="email">Email:  <input type="email" formControlName="email" required></label>
+             <div *ngIf="myform.get('email').hasError('required') && (myform.get('email').dirty) || myform.get('email').touched">please provide a email address</div></div><br>
+      <div>  <button type="submit">sumbit</button>  </div>  
+     <!--<div>  <label>Gender:</label> <label>
+          <input type="radio" name="gender" value="male" formControName="gender">Male</label>
+           <label><input type="radio" name="gender" value="female" formControlName="gender">Female</label> 
+      </div>  
+       <div>    <label>country:</label>  
+       <select name="Country">      
+          <option value="india">India</option>   
+             <option value="uk">UK</option>    
+             <option value="canada">Canada</option>    
+             <option value="usa">USA</option>    
+             <option value="russia">Russia</option>    
+             <option value="india">pakistan</option>    
+             <option value="india">srilanka</option>     
+            <option value="india">australia</option>     
+            
+            <option value="india">newsland</option>     
+             <option value="india">southafrica</option>   
+           </select>    </div><br><br>  
+             <label for="dep">DEPARTMENT:</label><br><br>           
+            <input type="checkbox" id="box">            
+            <label for="box">ECE</label><br><br>           
+             <input type="checkbox" id="box">            
+             <label for="box">IT</label><br><br>           
+              <input type="checkbox" id="box">            
+              <label for="box">CSE</label><br><br>           
+               <label for="bdaymonth">Month</label> 
+               <input type="month" id="bdaymonth"><br><br>
+               <label for="bdate">DOB</label>           
+                <input type="date" id="bdate"><br><br>    
+                <div>    <input type="submit" value="Submit">
+               </div><br><br>  </form>
+      <button (click)="show()">click</button> 
+     <h1>{{msg}}</h1>
+      <div *ngIf="value; else elseblock">  
+       <h1>true</h1>  </div> 
+      <ng-template #elseblock>   
+           <h1>false</h1>  </ng-template> -->
+    <table class="a">  
+     <tr> <th>Fname</th>
+           <th>Lname</th>
+            <th>Email</th>
+           </tr>
+           <tr *ngFor="let use of data" >
+               <td>{{use.fname | user:use.gender}}</td>
+               <td>{{use.lname}}</td>
+               <td>{{use.email}}</td>
+          </tr></table>
+      

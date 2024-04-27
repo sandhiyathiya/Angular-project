@@ -1,0 +1,26 @@
+.a,table,tr,td,th{
+     border: 1px solid black; 
+    padding: 10px;
+    margin-left: 600px;
+    
+
+}
+.b{
+    background-color: plum;
+    font-size: 25px;
+}
+#c{
+    text-align: center;
+}
+.d{
+    margin-left: 400px ;
+    background-color: palevioletred;
+    height: 400px;
+    width: 600px;
+    padding-top: 20px;
+}
+.e{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}

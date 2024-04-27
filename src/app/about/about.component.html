@@ -1,0 +1,6 @@
+<p>about works!</p>
+<div><app-nav (reciever)="recieverdata"></app-nav></div>
+<h1>{{value}}</h1>
+<button (click)="getvalue()"> send</button>
+<ol *ngFor="let data of app">
+    <li>{{data.title}}</li></ol> 

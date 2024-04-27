@@ -1,0 +1,20 @@
+<p>table works!</p>
+<p>table works!</p>
+<table class="a">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Address</th>
+        <th>fees</th>
+    </tr>
+    <tr *ngFor="let employee of data">
+        <td>{{ employee.Name }}</td>
+        <td>{{ employee.Id }}</td>
+        <td>{{ employee.Email }}</td>
+        <td>{{ employee.Password }}</td>
+        <td>{{ employee.Address }}</td>
+    </tr>
+</table>
+<h1>{{myinput}}</h1>
